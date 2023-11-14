@@ -18,4 +18,4 @@ def test_setbalance():
 def sumar_mucho():
     obj = Wallet(0)
     obj.setbalance(20)
-    assert obj.get_balance() = 1000
+    assert obj.get_balance() == 1000
