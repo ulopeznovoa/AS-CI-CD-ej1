@@ -1,0 +1,19 @@
+name: workflow
+
+on: push
+
+jobs:
+  wallet:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar codigo
+        run: actions/checkout@v4
+
+      - name: Instalar pytest
+        run: pytest test.py
+
+      - name: Probar codigo
+        run: pytest test.py
+
+        
