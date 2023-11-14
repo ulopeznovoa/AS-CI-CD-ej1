@@ -1,0 +1,19 @@
+name: workflow2
+
+on: pull_request
+
+jobs:
+  suma:
+    runs-on: ubuntu-latest
+
+    permissions:
+      security-events: write
+      
+    steps:
+      - name: bajar codigo
+        uses: actions/checkout@v4
+
+      - name: advanced-security/python-lint-code-scanning-action@v1
+        uses: advanced-security/python-lint-code-scanning-action@v1
+        with: 
+          linter: pylint
