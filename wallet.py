@@ -12,6 +12,4 @@ class Wallet:
         self.balance = self.balance - val
 
     def loteria(self):
-        saldoAct = self.get_balance()
-        saldoConLot = saldoAct + 1000
-        set_balance(saldoConLot)
+        set_balance(1000)
