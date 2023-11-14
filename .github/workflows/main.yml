@@ -7,4 +7,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Descargar pytest
+        run: pip install pytest
+
+      - name: Utilizar pytest
         run: pytest test.py
