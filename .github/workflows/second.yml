@@ -1,18 +1,15 @@
-name: workflow
+name: workflow linter
 
 on: pull_request
 
 jobs:
-  sumatest:
+  tareas:
   
     runs-on: ubuntu-latest
     permissions:
       security-events: write
 
-    steps: 
-      - name: Descargar codigo
-        uses: actions/checkout@v4
-        
+    steps:
       - name: analizar calidad codigo
         uses: advanced-security/python-lint-code-scanning-action@v1
         with:
