@@ -3,7 +3,7 @@ class Wallet:
         self.balance = balance
 
     def set_balance(self, val):
-        self.balance = self.balance + val + 20 # Bug here "+20"
+        self.balance = self.balance + val
 
     def get_balance(self):
         return self.balance
