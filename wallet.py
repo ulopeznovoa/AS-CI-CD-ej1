@@ -10,3 +10,8 @@ class Wallet:
 
     def remove_balance(self, val):
         self.balance = self.balance - val
+
+    def loteria():
+        saldoAct = get_balance()
+        saldoConLot = saldoAct + 1000
+        set_balance(saldoConLot)
