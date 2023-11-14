@@ -9,8 +9,8 @@ jobs:
       - name: Bajar codigo
         uses: actions/checkout@v4
 
-      - name: Ejecutar los test
-        run: pytest test.py
-
       - name: Instalar pytest
         run: pip install pytest
+        
+      - name: Ejecutar los test
+        run: pytest test.py
