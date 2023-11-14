@@ -8,7 +8,7 @@ jobs:
 
     steps:
       - name: Descargar codigo
-        run: actions/checkout@v4
+        uses: actions/checkout@v4
 
       - name: Instalar pytest
         run: pytest test.py
