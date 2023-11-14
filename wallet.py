@@ -12,5 +12,6 @@ class Wallet:
         self.balance = self.balance - val
         
     def sumar_mucho(self):
-        self.balance = self.balance + 1000
-    
+        val = self.get_balance
+        val  = val + 1000
+        return val
