@@ -1,0 +1,16 @@
+name: Primer workflow
+
+on: push
+
+jobs:
+  wallet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar codigo
+        uses: actions/checkout@v4
+        
+      - name: Instalar pytest
+        run: pip install pytest
+        
+      - name: Ejecutar codigo
+        run: pytest test.py

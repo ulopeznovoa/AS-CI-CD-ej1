@@ -1,0 +1,16 @@
+name: Segundo workflow
+
+on: 
+  pull_request
+
+jobs:
+  wallet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar codigo
+        uses: actions/checkout@v4
+        
+      - name: Accion Linter
+        uses: advanced-security/python-lint-code-scanning-action@v1
+        with:
+          linter: pylint
