@@ -1,0 +1,19 @@
+name: Test workflow
+# Cuando suceda qué
+on:
+  push:
+    branches:
+      - main
+jobs:
+ hola_mundo:
+   runs-on: ubuntu-latest
+  
+   steps:
+     - name: Bajar código 
+       uses: actions/checkout@v4
+
+     - name: Instalar pytest
+       run: pip install pytest
+
+     - name: Ejecutar test
+       run: pytest test.py
