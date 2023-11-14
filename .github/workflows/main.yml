@@ -5,7 +5,11 @@ on: push
 jobs: 
   prueba:
     runs-on: windows-latest
+  
     steps:
+      - name: Bajar codigo
+        uses: actions/checkout@v4
+    
       - name: Descargar pytest
         run: pip install pytest
 
