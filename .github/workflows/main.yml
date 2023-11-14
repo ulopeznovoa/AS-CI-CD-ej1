@@ -10,4 +10,4 @@ jobs:
         run: pip install pytest
 
       - name: Utilizar pytest
-        run: pytest test.py
+        run: pytest ../test.py
