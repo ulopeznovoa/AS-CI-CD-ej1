@@ -1,6 +1,9 @@
 name: workflow
 
-on: push
+on: 
+  push:
+    branches:
+      - main 
 
 jobs:
   wallet:
@@ -15,5 +18,6 @@ jobs:
 
       - name: Probar codigo
         run: pytest test.py
+
 
         
