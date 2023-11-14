@@ -1,5 +1,9 @@
 name: Test workflow
-on: push
+# Cuando suceda qué
+on:
+  push:
+    branches:
+      - main
 jobs:
  hola_mundo:
    runs-on: ubuntu-latest
