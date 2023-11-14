@@ -11,7 +11,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Instalar pytest
-        run: pytest test.py
+        run: pip install pytest
 
       - name: Probar codigo
         run: pytest test.py
