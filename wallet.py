@@ -10,3 +10,8 @@ class Wallet:
 
     def remove_balance(self, val):
         self.balance = self.balance - val
+        
+    def sumar_mucho(self):
+        val = self.get_balance
+        val  = val + 1000
+        return val
