@@ -1,0 +1,16 @@
+name: Mi workflow
+
+on: push 
+
+jobs: 
+  tareas: 
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Bajar codigo
+        uses: actions/checkout@v4
+
+      - name: Ejecutar los test
+        run: pytest test.py
+
+      - name: Instalar pytest
+        run: pip install pytest
