@@ -1,0 +1,10 @@
+name: Workflow ej1
+
+on: push
+
+jobs: 
+  prueba:
+    runs-on: windows-latest
+    steps:
+      - name: Descargar pytest
+        run: pytest test.py
