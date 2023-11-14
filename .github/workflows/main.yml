@@ -1,0 +1,15 @@
+name: Ejercicio 1
+
+on: push
+
+jobs:
+  tareas:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar codigo
+        uses: actions/checkout@v4
+
+      - name: Instalar y testear con pytest
+        run: |
+          pip install pytest
+          pytest test.py
