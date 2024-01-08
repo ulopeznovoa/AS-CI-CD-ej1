@@ -18,4 +18,4 @@ def test_setbalance():
 def test_inc1000():
     obj = Wallet(500)
     obj.inc_balance_1000()
-    assert obj.get_balance() == 1499
+    assert obj.get_balance() == 1500
