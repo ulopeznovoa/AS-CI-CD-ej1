@@ -1,0 +1,15 @@
+name: Workflow 2
+
+on: pull_request
+
+jobs: 
+  tareas:
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+    steps:
+      - name: mirar code
+        uses: advanced-security/python-lint-code-scanning-action@v1
+        with:
+          linter: pylint
+
