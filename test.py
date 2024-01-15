@@ -14,3 +14,8 @@ def test_setbalance():
     obj = Wallet(0)
     obj.set_balance(40)
     assert obj.get_balance() == 40
+
+def test_intentional_error():
+    # Introducir un error intencional aquí, por ejemplo, una afirmación falsa
+    assert 1 == 2
+
