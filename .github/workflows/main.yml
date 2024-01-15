@@ -1,6 +1,9 @@
-name: Test de Python con Pytest
+name: Python Tests
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   test:
@@ -17,7 +20,7 @@ jobs:
 
     - name: Instalar dependencias
       run: |
-        pip install pytest
+        pip install -r requirements.txt
 
     - name: Ejecutar pruebas
       run: |
