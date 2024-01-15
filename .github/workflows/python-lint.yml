@@ -1,0 +1,28 @@
+name: Python Lint Code Scanning
+
+on: [push, pull_request]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    permissions:
+      security-events: write
+
+    steps:
+    - name: Checkout del código
+      uses: actions/checkout@v2
+
+    - name: Configurar Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+
+    - name: Instalar dependencias
+      run: |
+        pip install -r requirements.txt
+
+    - name: Ejecutar análisis de código con pylint
+      uses: advanced-security/python-lint-code-scanning-action@v1
+      with:
+        linter: pylint
