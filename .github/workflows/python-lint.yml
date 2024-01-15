@@ -1,6 +1,9 @@
 name: Python Lint Code Scanning
 
-on: [push, pull_request]
+on:
+  pull_request:
+    branches:
+      - '*'
 
 jobs:
   lint:
@@ -26,3 +29,4 @@ jobs:
       uses: advanced-security/python-lint-code-scanning-action@v1
       with:
         linter: pylint
+
