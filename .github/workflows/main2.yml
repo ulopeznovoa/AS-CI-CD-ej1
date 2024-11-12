@@ -1,0 +1,14 @@
+name: Comprobar codigo
+
+on: pull request
+
+jobs:
+  hola_mundo:
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+    steps:
+      - name: comprobar codigo
+        uses: advanced-security/python-lint-code-scanning-action@v1
+        with:
+          linter: pylint
