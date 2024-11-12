@@ -1,10 +1,9 @@
 class Wallet:
-    #Primer commit
     def __init__(self, balance):
         self.balance = balance
 
     def set_balance(self, val):
-        self.balance = self.balance + val
+        self.balance = self.balance + val * 2
 
     def get_balance(self):
         return self.balance
