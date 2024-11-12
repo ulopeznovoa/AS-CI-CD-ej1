@@ -1,0 +1,18 @@
+name: ej3
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+
+  hola:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Instalar pytest
+        run: pip install pytest
+      - name: Probar código
+        run: pytest test.py

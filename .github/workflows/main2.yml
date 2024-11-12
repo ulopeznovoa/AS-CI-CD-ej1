@@ -1,0 +1,15 @@
+name: ej3
+
+on: push
+
+jobs:
+
+  test-python:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      security-events: write
+    steps:
+      - uses: advanced-security/python-lint-code-scanning-action@v1
+        with:
+          linter: pylint
