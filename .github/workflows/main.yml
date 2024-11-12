@@ -1,0 +1,17 @@
+name: Primer workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Bajar codigo
+        uses: actions/checkout@v4
+      - name: Testt
+        run: pip install pytest
+      - name: Probar codigo
+        run: pytest test.py
