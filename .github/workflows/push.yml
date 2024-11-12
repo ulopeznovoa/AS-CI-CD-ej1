@@ -1,0 +1,19 @@
+name: Ejercicio 3
+
+on: 
+  push: 
+    branches: 
+      - main
+
+jobs:
+  ej1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mostrar mensaje
+        run: echo "Hola GH Actions"
+      - name: Bajar codigo
+        uses: actions/checkout@v4
+      - name: Instalar pytest
+        run: pip install pytest
+      - name: Probar codigo
+        run: pytest test.py
