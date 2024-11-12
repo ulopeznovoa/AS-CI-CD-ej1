@@ -1,0 +1,33 @@
+name: Code Quality Analysis
+
+on: push
+
+permissions:
+  security-events: write
+
+jobs:
+  lint_code:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Descargar el código
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Configurar Python
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'  # Cambia a la versión que necesites (e.g., '3.9')
+
+      # Instalar pylint
+      - name: Install pylint
+        run: |
+          python -m pip install --upgrade pip
+          pip install pylint
+
+      # Ejecutar análisis de código con pylint
+      - name: Run Code Quality Analysis
+        uses: advanced-security/python-lint-code-scanning-action@v1
+        with:
+          linter: pylint
