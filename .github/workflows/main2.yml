@@ -1,6 +1,6 @@
 name: Comprobar codigo
 
-on: pull request
+on: pull_request
 
 jobs:
   hola_mundo:
