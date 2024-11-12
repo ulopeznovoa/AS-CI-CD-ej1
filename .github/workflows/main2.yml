@@ -1,0 +1,18 @@
+name: Workflow ejercicio 2
+
+on: pull_request
+
+jobs:
+  hola_mundo:
+    runs-on: ubuntu-latest
+
+    permissions:
+      security-events: write
+
+    steps:
+      - name: Bajar código
+        uses: actions/checkout@v4
+      - name: Analizar código
+        uses: advanced-security/python-lint-code-scanning-action@v1
+        with:
+          linter: pylint
