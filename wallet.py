@@ -10,3 +10,8 @@ class Wallet:
 
     def remove_balance(self, val):
         self.balance = self.balance - val
+
+    def increase_balance_by_1000(self):
+        """Incrementa el saldo actual en 1000 unidades."""
+        self.balance += 1000
+
