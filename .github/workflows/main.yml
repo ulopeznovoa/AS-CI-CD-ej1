@@ -1,0 +1,20 @@
+name: examen-workflow
+
+on:
+  push:
+    branches: [ nueva-caracterisitca ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Bajar cdoigo
+        uses: actions/checkout@v5
+      - name: Bajar entorno
+        uses: actions/setup-python@v6
+      - name: 1.Ejecutar comandos
+        run: pip install pytest
+      - name: 2.Ejecutar comandos
+        run: pytest test.py
+      - name: Docker
+        uses: docker/build-push-action@v6
