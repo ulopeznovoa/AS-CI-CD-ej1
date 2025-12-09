@@ -4,4 +4,3 @@ Este repositorio contiene el código para realizar el 1er ejercicio relacionado 
 
 Este código ha sido adaptado de la siguiente fuente: [Automating Your Python Unit Tests with GitHub Actions: A Step-by-Step Guide
 ](https://blog.devgenius.io/automating-your-python-unit-tests-with-github-actions-a-step-by-step-guide-26d1ed7c07a8)
-HOLA
