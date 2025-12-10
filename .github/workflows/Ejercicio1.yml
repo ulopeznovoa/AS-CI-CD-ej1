@@ -1,0 +1,25 @@
+name: Primer workfflow
+on: push
+jobs:
+  build:
+    name: Primer_workflow
+    runs-on: ubuntu-latest
+
+    steps:
+    
+      - name: Descargar lo necesario
+        uses: actions/checkout@v4
+
+      - name: Configurar el entoeno
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Instalar pytest
+        run: pip install pytest
+
+      - name: Ejecutar pruebas
+        run: pytest test.py
+
+      
+    
