@@ -1,0 +1,20 @@
+name: Lint on Pull Request
+
+on:
+  pull_request:
+
+jobs:
+  pylint:
+    runs-on: ubuntu-latest
+
+    permissions:
+      security-events: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run pylint
+        uses: advanced-security/python-lint-code-scanning-action@v1
+        with:
+          linter: pylint
