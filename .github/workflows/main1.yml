@@ -1,0 +1,16 @@
+name: ej3
+
+on: [pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+       security-events: write
+    steps:
+    - name: Descargar codigo
+      uses: actions/checkout@v4
+    - name: calidad
+      uses: advanced-security/python-lint-code-scanning-action@v1
+      with:
+        linter: pylint
