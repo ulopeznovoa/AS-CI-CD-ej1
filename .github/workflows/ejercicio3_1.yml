@@ -1,0 +1,18 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clonar código
+        uses: actions/checkout@v5
+      - name: Instalar PyTest
+        run: |
+          pip install pytest
+
+      - name: Ejecutar pytest.py
+        run: |
+          pytest test.py
