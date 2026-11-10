@@ -1,0 +1,20 @@
+name: EJ3(1)
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  probar_software:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Bajar codigo
+        uses: actions/checkout@v4
+
+      - name: Instalar pytest
+        run: pip install pytest
+
+      - name: Ejecutar tests
+        run: pytest -v test.py
